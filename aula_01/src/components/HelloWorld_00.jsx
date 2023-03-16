@@ -7,7 +7,7 @@ import React from "react";
 const HelloWolrd = () => {
   return (
     <div>
-      <h1>Coisa {1 + 2}</h1>
+      <h1>Conte comigo 1, 2, {1 + 2}</h1>
     </div>
   )
 }
