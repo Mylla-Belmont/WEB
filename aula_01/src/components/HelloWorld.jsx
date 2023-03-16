@@ -2,10 +2,12 @@ import React from "react";
 
 // não é html, e jsx. Não tem como colocar html dentro de 
 // um bloco de codigos javaScript
-function HelloWolrd() {
+
+// permite adicionar codigos javaScript no jsx
+const HelloWolrd = () => {
   return (
     <div>
-      <h1>Coisa</h1> 
+      <h1>Coisa {1 + 2}</h1>
     </div>
   )
 }
