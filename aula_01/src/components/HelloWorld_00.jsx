@@ -2,7 +2,6 @@ import React from "react";
 
 // não é html, e jsx. Não tem como colocar html dentro de 
 // um bloco de codigos javaScript
-
 // permite adicionar codigos javaScript no jsx
 const HelloWolrd = () => {
   return (
