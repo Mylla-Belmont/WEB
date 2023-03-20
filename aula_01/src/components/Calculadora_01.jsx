@@ -21,4 +21,4 @@ const Calculadora_01 = () => {
     )
 }
 
-export default Calculadora_01;
+export default Calculadora;
