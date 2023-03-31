@@ -1,22 +1,12 @@
+import FunctionA from './components/03Hierarquia/FunctionA';
 import './App.css';
-//import HelloWorld from "./components/HelloWorld_00";
-//import Calculadora_01 from './components/Calculadora_01';
-//import MyProps from './components/MyProps_02';
-//import MeusDados from './atividade00/MeusDados_01';
-//import Props from './atividade00/MeusDados_02';
-import Temperatura from './atividade00/Temperatura_03';
+//import { Header, Body, Footer} from './components/MultiploComponentes';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <MeusDados/> */}
-        {/* <Props
-          nome="Camila Belmont Mesquita"
-          curso="Sistemas de Informação"
-          universidade="Universidade Federal do Ceará"
-        /> */}
-        <Temperatura/>
+        <FunctionA/>
       </header>
     </div>
   );
