@@ -1,15 +1,18 @@
-import FunctionA from './components/03Hierarquia/FunctionA';
 import './App.css';
-//import { Header, Body, Footer} from './components/MultiploComponentes';
+import Cidades from './atividade03/Questao01/Cidades';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <header className="App-header">
-        <FunctionA/>
+        <Cidades 
+          cidade1={"Fortaleza"}
+          cidade2={"Quixadá"}
+          cidade3={"Iguatu"}
+          cidade4={"Sobral"} />
       </header>
     </div>
   );
 }
 
-export default App;
+export default App
