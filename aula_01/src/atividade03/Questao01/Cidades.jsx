@@ -17,8 +17,8 @@ const Cidades = ({cidade1, cidade2, cidade3, cidade4}) => {
             let menor = contador1;
 
             for (let i = 1; i < cidades.length; i++) {
-                if (cidades[i] > maior) maior = cidades[i]
-                if (cidades[i] < menor) menor = cidades[i]
+                if (cidades[i] >= maior) maior = cidades[i]
+                if (cidades[i] <= menor) menor = cidades[i]
             }
 
             for (let i = 0; i < cidades.length; i++) {

@@ -1,15 +1,11 @@
 import './App.css';
-import Cidades from './atividade03/Questao01/Cidades';
+import Pai from './atividade03/Questao02/Pai';
 
 function App() {
   return (
     <div className="App"> 
       <header className="App-header">
-        <Cidades 
-          cidade1={"Fortaleza"}
-          cidade2={"Quixadá"}
-          cidade3={"Iguatu"}
-          cidade4={"Sobral"} />
+        <Pai/>
       </header>
     </div>
   );
