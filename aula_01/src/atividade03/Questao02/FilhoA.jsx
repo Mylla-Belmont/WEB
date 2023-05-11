@@ -1,18 +1,15 @@
 const FilhoA = ({vetor, mensagemPai}) => {
 
     const maiorElemento = () => {
-        let maior = vetor[0]
-        for (let i = 0; i < vetor.length; i++)
-            if (vetor[i] > maior) maior = vetor[i]
-        return maior
+        const maior = Math.max(...vetor)
+        mensagemPai(maior)
     }
 
     return (
         <div>
-            <h3> Maior: </h3>
             <button onClick={
                 () => {
-                    mensagemPai(maiorElemento())
+                    maiorElemento()
                 }
             }>
                 Calcular Maior

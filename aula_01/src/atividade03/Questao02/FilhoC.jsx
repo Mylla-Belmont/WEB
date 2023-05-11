@@ -7,15 +7,14 @@ const FilhoC = ({vetor, mensagemPai}) => {
             media += vetor[i]
             cont++
         }
-        return (media/cont)
+        mensagemPai((media/cont))
     }
 
     return (
         <div>
-            <h3> Media: </h3>
             <button onClick={
                 () => {
-                    mensagemPai(mediaElemento())
+                    mediaElemento()
                 }
             }>
                 Calcular Media
