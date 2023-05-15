@@ -1,11 +1,12 @@
 import './App.css';
-import questao01 from './atividade04/Questao01/questao01';
+// import Questao01A from './AP-01/Questao01';
+// import Questao02 from './AP-01/Questao02';
 
 function App() {
   return (
     <div className="App"> 
       <header className="App-header">
-        <questao01 />
+        // < Questao02 />
       </header>
     </div>
   );
