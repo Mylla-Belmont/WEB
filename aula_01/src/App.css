@@ -1,22 +1,11 @@
-.App {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-}
+/* .homeContainer {
+  background-image: url("./Projeto/images/paisagem.jpg");
+  background-size: cover;
+  background-position:top left;
+  width: 100%;
+  height: 100vh;
+} */
 
-.App-header {
-  background-color: #0b0d11;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(15px);
-  color: rgb(255, 255, 255);
-}
-
-button {
-  height: 50px;
-  width: 100px;
-  color: #0b0d11;
-  background-color: yellow;
+.app {
+  background-color: #070a1c;
 }

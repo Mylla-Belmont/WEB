@@ -1,10 +1,11 @@
-import React from "react";
 import { AppBar, Container, Toolbar, Typography, Box, Menu, MenuItem, Button, Tooltip } from "@mui/material";
-import AdbIcon from "@mui/icons-material/CatchingPokemon";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import AdbIcon from "@mui/icons-material/CatchingPokemon";
 import SettingsIcon from "@mui/icons-material/Settings";
 import paisagem from "./images/paisagem.jpg";
+import { Link } from "react-router-dom";
+import React from "react";
 
 const MyMenu = () => {
     const [anchorElPokemon, setAnchorElPokemon] = React.useState(null);
@@ -28,7 +29,14 @@ const MyMenu = () => {
                 <Tooltip title="Abrir opções">
                     <Button
                         onClick={handleOpenPokemonMenu}
-                        sx={{ my: 2, mx: 0, color: 'white', fontWeight: 700, }}
+                        sx={{
+                            my: 2,
+                            mx: 2,
+                            color: 'white',
+                            fontSize: "20px",
+                            fontWeight: 700,
+                            fontFamily: 'Pokemon X and Y'
+                        }}
                     >
                         Pokédex
                     </Button>
@@ -41,10 +49,14 @@ const MyMenu = () => {
                     sx={{ marginLeft: 1 }}
                 >
                     <MenuItem onClick={handleCatchPokemon}>
-                        <Typography textAlign="center">Registrar</Typography>
+                        <Typography textAlign="center">
+                            Registrar
+                        </Typography>
                     </MenuItem>
                     <MenuItem onClick={handleClosePokemonMenu}>
-                        <Typography textAlign="center">Listar</Typography>
+                        <Typography textAlign="center">
+                            Listar
+                        </Typography>
                     </MenuItem>
                 </Menu>
             </Box>
@@ -54,22 +66,28 @@ const MyMenu = () => {
     return (
         <AppBar position="static" sx={{ backgroundColor: 'black' }}>
             <Container maxWidth="xl">
-                <Toolbar disableGutters sx={{ backgroundImage: `url(${paisagem})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+                <Toolbar disableGutters sx={{
+                    backgroundImage: `url(${paisagem})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'bottom',
+                    fullWidth: true
+                }}>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Box sx={{ flexGrow: 1 }}>
                         <Typography
                             variant="h5"
                             noWrap
-                            component="a"
-                            href="/"
+                            component={Link}
+                            to={"Home"}
                             sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.1rem',
                                 color: 'white',
-                                textDecoration: 'none'
+                                display: 'flex',
+                                fontWeight: 700,
+                                fontSize: "30px",
+                                alignItems: 'center',
+                                textDecoration: 'none',
+                                letterSpacing: '.1rem',
+                                fontFamily: 'Pokemon X and Y'
                             }}
                         >
                             My Pokédex
@@ -80,19 +98,22 @@ const MyMenu = () => {
                         {pokemonDropMenu()}
                         <Button
                             onClick={() => alert('Pokémons!')}
-                            sx={{ my: 2, mx: 0, color: 'white', fontWeight: 700, }}
+                            sx={{
+                                my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px"
+                            }}
                         >
                             Pokémons
                         </Button>
                         <Button
                             onClick={() => alert('Treinadores!')}
-                            sx={{ my: 2, mx: 0, color: 'white', fontWeight: 700, }}
+                            sx={{ my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px" }}
                         >
                             Treinadores
                         </Button>
                         <Button
-                            onClick={() => alert('Sobre!')}
-                            sx={{ my: 2, mx: 0, color: 'white', fontWeight: 700, }}
+                            component={Link}
+                            to={"SobreProjeto"}
+                            sx={{ my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px" }}
                         >
                             Sobre
                         </Button>

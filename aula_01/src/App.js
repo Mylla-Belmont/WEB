@@ -1,9 +1,9 @@
-//import './App.css';
+import './App.css';
 import MainPage from './Projeto/MainPage';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       < MainPage />
     </div>
     // <div className="App"> 
