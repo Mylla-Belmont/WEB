@@ -1,14 +1,16 @@
-import './App.css';
-// import Questao01A from './AP-01/Questao01';
-// import Questao02 from './AP-01/Questao02';
+//import './App.css';
+import MainPage from './Projeto/MainPage';
 
 function App() {
   return (
-    <div className="App"> 
-      <header className="App-header">
-        // < Questao02 />
-      </header>
+    <div>
+      < MainPage />
     </div>
+    // <div className="App"> 
+    //   <header className="App-header">
+    //        < MainPage />
+    //   </header>
+    // </div>
   );
 }
 
