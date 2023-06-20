@@ -68,7 +68,7 @@ const MyMenu = () => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{
                     backgroundImage: `url(${paisagem})`,
-                    backgroundSize: 'cover',
+                    backgroundSize: 'cover',    
                     backgroundPosition: 'bottom',
                     fullWidth: true
                 }}>
@@ -97,12 +97,12 @@ const MyMenu = () => {
                     <Box sx={{ flexGrow: 0.1, display: { xs: 'flex', md: 'flex' } }}>
                         {pokemonDropMenu()}
                         <Button
-                            onClick={() => alert('Pokémons!')}
+                            onClick={() => alert('Pokémon!')}
                             sx={{
                                 my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px"
                             }}
                         >
-                            Pokémons
+                            Pokémon
                         </Button>
                         <Button
                             onClick={() => alert('Treinadores!')}

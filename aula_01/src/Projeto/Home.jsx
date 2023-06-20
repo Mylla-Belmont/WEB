@@ -1,21 +1,22 @@
 import { Box, Container, Typography } from "@mui/material"
+// import pokemonCharizard from "./images/pokemonsCharizard.png"
 
 const Home = () => {
     return (
-        <Container maxWidth="xl">
-            <Box sx={{ backgroundColor: 'black', height: '500px', fullWidth: true }}>
+        <Container>
+            <Box sx={{ height: '900px', weight: '200px', backgroundColor: 'none' }}>
                 <Typography sx={{
-                    color: 'white',
                     display: 'flex',
-                    fontWeight: 700,
                     alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '30px',
+                    fontWeight: 700,
                     letterSpacing: '.2rem',
                     fontFamily: 'Pokemon X and Y'
                 }}>
                     Home
                 </Typography>
-            </Box>
-            <Box sx={{ backgroundColor: '#141A40', height: '200px', fullWidth: true }}>
             </Box>
         </Container>
     )

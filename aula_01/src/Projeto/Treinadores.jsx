@@ -1,6 +1,6 @@
 import { Container, Box, Typography } from "@mui/material"
 
-const SobreProjeto = () => {
+const Treinadores = () => {
     return (
         <Container>
             <Box sx={{ height: '900px', weight: '200px', backgroundColor: 'none' }}>
@@ -14,11 +14,11 @@ const SobreProjeto = () => {
                     letterSpacing: '.2rem',
                     fontFamily: 'Pokemon X and Y'
                 }}>
-                    Sobre
+                    Treinadores
                 </Typography>
             </Box>
         </Container>
     )
 }
 
-export default SobreProjeto
+export default Treinadores
