@@ -48,7 +48,11 @@ const MyMenu = () => {
                     onClose={handleClosePokemonMenu}
                     sx={{ marginLeft: 1 }}
                 >
-                    <MenuItem onClick={handleCatchPokemon}>
+                    <MenuItem 
+                        onClick={handleCatchPokemon}
+                        component={Link}
+                        to={"Registrar"}
+                    >
                         <Typography textAlign="center">
                             Registrar
                         </Typography>
@@ -97,15 +101,15 @@ const MyMenu = () => {
                     <Box sx={{ flexGrow: 0.1, display: { xs: 'flex', md: 'flex' } }}>
                         {pokemonDropMenu()}
                         <Button
-                            onClick={() => alert('Pokémon!')}
-                            sx={{
-                                my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px"
-                            }}
+                            component={Link}
+                            to={"Pokemon"}
+                            sx={{  my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px" }}
                         >
                             Pokémon
                         </Button>
                         <Button
-                            onClick={() => alert('Treinadores!')}
+                            component={Link}
+                            to={"Treinadores"}
                             sx={{ my: 2, mx: 2, color: 'white', fontWeight: 700, fontFamily: 'Pokemon X and Y', fontSize: "20px" }}
                         >
                             Treinadores
