@@ -7,6 +7,25 @@ const Registrar = () => {
     const [habitat, setHabitat] = useState("")
     const [raridade, setRaridade] = useState({ led: false, mid: false })
     const { led, mit } = raridade
+    const styleTextField = {
+        '.MuiInputBase-input': {
+        color: "#00e676" 
+    },
+    '& .MuiInputLabel-root': {
+        color: "#00e676 !important" 
+    },
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: '#00e676'
+        }
+    },
+    '& .MuiOutlinedInput-root:hover fieldset': {
+        borderColor: '#00e676',
+    },
+    '& .MuiOutlinedInput-root.Mui-focused fieldset': {
+        borderColor: '#00e676',
+    },
+    width: "50%"}
 
     function handleChackbox(event) {
         setRaridade({
@@ -49,49 +68,12 @@ const Registrar = () => {
                     name="Nome"
                     label="Nome"
                     sx={{
-                        '.MuiInputBase-input': {
-                            color: "#00e676"
-                        },
-                        '& .MuiInputLabel-root': {
-                            color: "#00e676" 
-                        },
-                        '& .MuiOutlinedInput-root': {
-                            '& fieldset': {
-                                borderColor: '#00e676'
-                            }
-                        },
-                        '& .MuiOutlinedInput-root:hover fieldset': {
-                            borderColor: '#00e676',
-                        },
-                        '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-                            borderColor: '#00e676',
-                        },
-                        width: "50%",
-                        mb: 5
+                        ...styleTextField, mb : 5
                     }}
                     onChange={(event) => setNome(event.target.value)}
                 />
                 <FormControl
-                    sx={{
-                        width: "50%",
-                        '.MuiInputBase-input': {
-                            color: "#00e676"
-                        },
-                        '& .MuiInputLabel-root': {
-                            color: "#00e676"
-                        },
-                        '& .MuiOutlinedInput-root': {
-                            '& fieldset': {
-                                borderColor: '#00e676'
-                            }
-                        },
-                        '& .MuiOutlinedInput-root:hover fieldset': {
-                            borderColor: '#00e676',
-                        },
-                        '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-                            borderColor: '#00e676',
-                        },
-                    }}
+                    sx={styleTextField}
                 >
                     <InputLabel id="select-habitat-label">
                         Habitat

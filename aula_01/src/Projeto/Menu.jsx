@@ -57,9 +57,13 @@ const MyMenu = () => {
                             Registrar
                         </Typography>
                     </MenuItem>
-                    <MenuItem onClick={handleClosePokemonMenu}>
+                    <MenuItem 
+                        onClick={handleClosePokemonMenu}
+                        component={Link}
+                        to={"CadernoPokemon"}
+                    >
                         <Typography textAlign="center">
-                            Listar
+                            Caderno
                         </Typography>
                     </MenuItem>
                 </Menu>

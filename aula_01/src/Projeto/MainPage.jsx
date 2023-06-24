@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Container } from "@mui/material"
+import CadernoPokemon from "./CadernoPokemon"
 import SobreProjeto from "./SobreProjeto"
 import Treinadores from "./Treinadores"
 import Registrar from "./Registrar"
@@ -18,6 +19,7 @@ const MainPage = () => {
                     <Route path="Registrar" element={<Registrar/>} />
                     <Route path="Treinadores" element={<Treinadores/>} />
                     <Route path="SobreProjeto" element={<SobreProjeto/>} />
+                    <Route path="CadernoPokemon" element={<CadernoPokemon/>} />
                 </Routes>
             </Container>
         </BrowserRouter>
