@@ -9,18 +9,13 @@ import React from "react";
 
 const MyMenu = () => {
     const [anchorElPokemon, setAnchorElPokemon] = React.useState(null);
-    const [caughtPokemons, setCaughtPokemons] = React.useState(0);
-
+    
     const handleOpenPokemonMenu = (event) => {
         setAnchorElPokemon(event.currentTarget);
     };
 
     const handleClosePokemonMenu = () => {
         setAnchorElPokemon(null);
-    };
-
-    const handleCatchPokemon = () => {
-        setCaughtPokemons(caughtPokemons + 1);
     };
 
     function pokemonDropMenu() {
@@ -49,7 +44,7 @@ const MyMenu = () => {
                     sx={{ marginLeft: 1 }}
                 >
                     <MenuItem 
-                        onClick={handleCatchPokemon}
+                        onClick={handleClosePokemonMenu}
                         component={Link}
                         to={"Registrar"}
                     >
@@ -60,10 +55,10 @@ const MyMenu = () => {
                     <MenuItem 
                         onClick={handleClosePokemonMenu}
                         component={Link}
-                        to={"CadernoPokemon"}
+                        to={"Lista"}
                     >
                         <Typography textAlign="center">
-                            Caderno
+                            Lista
                         </Typography>
                     </MenuItem>
                 </Menu>

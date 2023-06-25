@@ -1,31 +1,62 @@
 import { TextField, Typography, Box, FormControl, InputLabel, Select, MenuItem, Button, FormGroup, FormControlLabel, Checkbox, FormLabel } from "@mui/material"
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const Registrar = () => {
+const Editar = () => {
+    
+    const pokemons = [
+        { id: 0, nome: "Bubasauro", habitat: "AQU", raridade: {led: true, mit:true} },
+        { id: 1, nome: "Pikashu", habitat: "SEL", raridade: {led: true, mit:false}},
+        { id: 2, nome: "Charmander", habitat: "URB", raridade: {led: false, mit:true} },
+        { id: 3, nome: "Squirtle", habitat: "COS", raridade: {led: true, mit:true} },
+        { id: 4, nome: "Bulbasaur", habitat: "POL", raridade: {led: false, mit:true} }
+    ]
+    
+    let { id } = useParams()
 
     const [nome, setNome] = useState("")
     const [habitat, setHabitat] = useState("")
-    const [raridade, setRaridade] = useState({ led: false, mid: false })
+    const [raridade, setRaridade] = useState({ led: false, mit: false })
     const { led, mit } = raridade
+
     const styleTextField = {
         '.MuiInputBase-input': {
-        color: "#00e676" 
-    },
-    '& .MuiInputLabel-root': {
-        color: "#00e676 !important" 
-    },
-    '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-            borderColor: '#00e676'
+            color: "#00e676"
+        },
+        '& .MuiInputLabel-root': {
+            color: "#00e676 !important"
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: '#00e676'
+            }
+        },
+        '& .MuiOutlinedInput-root:hover fieldset': {
+            borderColor: '#00e676',
+        },
+        '& .MuiOutlinedInput-root.Mui-focused fieldset': {
+            borderColor: '#00e676',
+        },
+        width: "50%"
+    }
+
+    useEffect(
+        ()=>{
+            let pokemon = getPokemonById(id)
+            setNome(pokemon.nome)
+            setHabitat(pokemon.habitat)
+            setRaridade(pokemon.raridade)
         }
-    },
-    '& .MuiOutlinedInput-root:hover fieldset': {
-        borderColor: '#00e676',
-    },
-    '& .MuiOutlinedInput-root.Mui-focused fieldset': {
-        borderColor: '#00e676',
-    },
-    width: "50%"}
+        ,
+        []
+    )
+
+    function getPokemonById(id) {
+        for (let index = 0; index < pokemons.length; index++)
+            if (id == pokemons[index].id) 
+                return pokemons[index]
+        return null
+    }
 
     function handleChackbox(event) {
         setRaridade({
@@ -56,10 +87,11 @@ const Registrar = () => {
                         color: "white",
                         fontFamily: 'Pokemon X and Y',
                         fontSize: "25px",
-                        letterSpacing: '.2rem'
+                        letterSpacing: '.2rem',
+                        mb: 2
                     }}
                 >
-                    Registrar pokémon
+                    Editar pokémon 
                 </Typography>
                 <TextField
                     margin="normal"
@@ -67,8 +99,9 @@ const Registrar = () => {
                     id="nome"
                     name="Nome"
                     label="Nome"
+                    value={nome}
                     sx={{
-                        ...styleTextField, mb : 5
+                        ...styleTextField, mb: 5
                     }}
                     onChange={(event) => setNome(event.target.value)}
                 />
@@ -154,7 +187,7 @@ const Registrar = () => {
                             letterSpacing: '.1rem'
                         }}
                     >
-                        Registrar
+                        Editar
                     </Button>
                 </Box>
             </Box>
@@ -175,4 +208,4 @@ const Registrar = () => {
     )
 }
 
-export default Registrar
+export default Editar

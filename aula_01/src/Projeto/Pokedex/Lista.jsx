@@ -4,6 +4,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import { styled } from '@mui/material/styles';
+import { Link } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -33,6 +34,11 @@ const CadernoPokemon = () => {
         { id: 3, nome: "Squirtle", habitat: "AQU" },
         { id: 4, nome: "Bulbasaur", habitat: "PLA" }
     ]
+
+    function deletePokemonById() {
+        if (window.confirm("Vai me matar msm seu fdp?!"))
+            alert("Pokemon morto com sucesso!")
+    }
 
     const typeconfig = {
         color: "white",
@@ -79,10 +85,19 @@ const CadernoPokemon = () => {
                                             <StyledTableCell> {pokemon.habitat} </StyledTableCell>
                                             <StyledTableCell>
                                                 <Box>
-                                                    <IconButton aria-label="edit" sx={{ color: "#00e676" }}>
+                                                    <IconButton 
+                                                        aria-label="edit" 
+                                                        sx={{ color: "#00e676" }}
+                                                        component={Link}
+                                                        to={`/Editar/${pokemon.id}`}
+                                                    >
                                                         <EditIcon />
                                                     </IconButton>
-                                                    <IconButton aria-label="delete" sx={{ color: "#00e676" }}>
+                                                    <IconButton 
+                                                        aria-label="delete" 
+                                                        sx={{ color: "#00e676" }}
+                                                        onClick={()=>deletePokemonById(pokemon.id)}
+                                                    >
                                                         <DeleteIcon />
                                                     </IconButton>
                                                 </Box>
